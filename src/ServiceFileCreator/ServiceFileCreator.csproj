@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://github.com/vertigra/Services.Extensions.ServiceFileCreator</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/vertigra/Services.Extensions.ServiceFileCreator</RepositoryUrl>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
