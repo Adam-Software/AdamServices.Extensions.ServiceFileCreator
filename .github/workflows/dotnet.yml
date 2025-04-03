@@ -59,5 +59,4 @@ jobs:
       uses: rymndhng/release-on-push-action@master
       with:
          tag_prefix: v.
-         bump_version_scheme: norelease
          release_name: "Release <RELEASE_VERSION>"
