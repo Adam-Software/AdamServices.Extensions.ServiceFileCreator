@@ -14,6 +14,7 @@ on:
   #    - "**"
 env:
   VERSION: 1.0.0
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
 jobs:
   build:
@@ -48,7 +49,7 @@ jobs:
       run: dotnet nuget push nupkgs/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
 
     - name: Add nuget source
-      run: dotnet nuget add source --username vertigra --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/vertigra/index.json"
+      run: dotnet nuget add source --username vertigra --password $GITHUB_TOKEN --store-password-in-clear-text --name github "https://nuget.pkg.github.com/vertigra/index.json"
       
     - name: Upload nuget package to github package
       if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
