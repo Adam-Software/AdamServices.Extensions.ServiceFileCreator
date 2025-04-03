@@ -52,4 +52,4 @@ jobs:
       
     - name: upload nuget package to github package
       #if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
-      run:  dotnet nuget push nupkgs/*.nupkg --source "github"  --api-key "NoNeedApiKey"
+      run:  dotnet nuget push nupkgs/*.nupkg --source "github"
