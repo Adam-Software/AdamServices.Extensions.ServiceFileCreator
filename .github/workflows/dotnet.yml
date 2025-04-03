@@ -53,3 +53,9 @@ jobs:
     - name: Upload nuget package to github package
       if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
       run:  dotnet nuget push nupkgs/*.nupkg --source "github" --skip-duplicate
+      
+    - name: Publish Release
+      uses: rymndhng/release-on-push-action@master
+      with:
+         tag_prefix: v.
+         bump_version_scheme: norelease
