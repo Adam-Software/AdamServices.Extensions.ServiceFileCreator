@@ -8,7 +8,7 @@
     <Title>$(SolutionName)</Title>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/vertigra/Services.Extensions.ServiceFileCreator</RepositoryUrl>
-    <Version>0.0.21</Version>
+    <Version>0.0.22</Version>
     <PackageId>$(SolutionName)</PackageId>
     <Authors>vertigra</Authors>
     <Product>$(SolutionName)</Product>
