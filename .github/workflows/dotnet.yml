@@ -51,5 +51,5 @@ jobs:
       run: dotnet nuget add source --username vertigra --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/vertigra/index.json"
       
     - name: Upload nuget package to github package
-      if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
+      #if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
       run:  dotnet nuget push nupkgs/*.nupkg --source "github" --skip-duplicate
