@@ -56,7 +56,7 @@ jobs:
     #  run:  dotnet nuget push nupkgs/*.nupkg --source "github" --skip-duplicate
       
     - name: Publish Release
-      uses: "marvinpinto/action-automatic-releases@latest"
+      uses: "marvinpinto/action-automatic-releases@<VERSION>"
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         prerelease: false
