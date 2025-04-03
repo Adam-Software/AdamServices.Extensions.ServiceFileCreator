@@ -9,8 +9,8 @@
     <PackageProjectUrl>https://github.com/vertigra/Services.Extensions.ServiceFileCreator</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/vertigra/Services.Extensions.ServiceFileCreator</RepositoryUrl>
-    <Version>0.0.7</Version>
-    <PackageId>Services.Extensions.ServiceFileCreator</PackageId>
+    <Version>0.0.8</Version>
+    <PackageId>Adam.Services.Extensions.ServiceFileCreator</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
