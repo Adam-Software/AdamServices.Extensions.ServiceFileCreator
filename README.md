@@ -38,6 +38,8 @@ NuGet\Install-Package AdamServices.Extensions.ServiceFileCreator
   }
   ```
 
+An example can be viewed in the [test](https://github.com/Adam-Software/AdamServices.Extensions.ServiceFileCreator/blob/master/src/ServiceFileCreator.TestApp/Program.cs) project.
+
 ### Create service file
 
 * After launching the application, the `service_info.json` file will appear in the root directory of the repository. In this case, the project should have the following 
