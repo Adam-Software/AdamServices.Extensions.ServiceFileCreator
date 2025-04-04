@@ -5,8 +5,8 @@ name: .NET Publish Nuget Package And Release
 
 on:
   push:
-    #branches: 
-    #  - "**"
+    branches: 
+      - "**"
     tags: 
       - "v.[0-9]+.[0-9]+.[0-9]+"
   #pull_request:
@@ -59,7 +59,7 @@ jobs:
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        automatic_release_tag: ${{ VERSION }}
+        automatic_release_tag: "v.${VERSION}"
         prerelease: false
         files: |
             nupkgs/*.nupkg
