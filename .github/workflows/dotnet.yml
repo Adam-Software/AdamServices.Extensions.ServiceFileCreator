@@ -56,11 +56,10 @@ jobs:
     #  run:  dotnet nuget push nupkgs/*.nupkg --source "github" --skip-duplicate
       
     - name: Publish Release
-      uses: CupOfTea696/gh-action-auto-release@v1.0.2
+      uses: "marvinpinto/action-automatic-releases@latest"
       with:
-          title: "Release: $VERSION"
-          tag: "v.$semver"
-          draft: false
-          regex: "/^Release: #{semver}$/i"
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        automatic_release_tag: "${{ env.VERSION }}"
+        prerelease: false
+        files: |
+            nupkgs/*.nupkg
