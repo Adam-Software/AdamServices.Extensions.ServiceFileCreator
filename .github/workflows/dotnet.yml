@@ -5,8 +5,8 @@ name: .NET Publish Nuget Package And Release
 
 on:
   push:
-    #branches: 
-    #  - "**"
+    branches: 
+      - "**"
     tags: 
       - "v.[0-9]+.[0-9]+.[0-9]+"
   #pull_request:
@@ -48,22 +48,22 @@ jobs:
     - name: Pack nuget packages
       run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
       
-    - name: upload nuget package to nuget.org
-      if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
-      run: dotnet nuget push nupkgs/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+    #- name: upload nuget package to nuget.org
+    #  if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
+    #  run: dotnet nuget push nupkgs/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
 
-    - name: Add nuget source
-      run: dotnet nuget add source --username $USERNAME --password $GITHUB_TOKEN --store-password-in-clear-text --name github "https://nuget.pkg.github.com/$NAMESPACE/index.json"
+    #- name: Add nuget source
+    #  run: dotnet nuget add source --username $USERNAME --password $GITHUB_TOKEN --store-password-in-clear-text --name github "https://nuget.pkg.github.com/$NAMESPACE/index.json"
       
-    - name: Upload nuget package to github package
-      if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
-      run:  dotnet nuget push nupkgs/*.nupkg --source "github" --skip-duplicate
+    #- name: Upload nuget package to github package
+    #  if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
+    #  run:  dotnet nuget push nupkgs/*.nupkg --source "github" --skip-duplicate
       
     - name: Publish Release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ env.GITHUB_TOKEN }}"
-        automatic_release_tag: "${{ env.VERSION }}"
+        automatic_release_tag: "v.${{ env.VERSION }}"
         prerelease: false
         files: |
             nupkgs/*.nupkg
