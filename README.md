@@ -37,3 +37,20 @@ NuGet\Install-Package AdamServices.Extensions.ServiceFileCreator
   "DOTNET_ENVIRONMENT": "Development"
   }
   ```
+
+### Create service file
+
+* After launching the application, the `service_info.json` file will appear in the root directory of the repository. In this case, the project should have the following 
+  ```
+  RepositoryName == AdamServices.SolutionName (e.g. AdamServices.FindRobot)
+  |
+  | -- src
+  |     |
+  |     |-- SolutionName (e.g. FindRobot)
+  |           |
+  |           | --  SolutionName.csproj (e.g. FindRobot)
+  |
+  | -- AdamServices.SolutionName (e.g. AdamServices.FindRobot)
+  | -- service_info.json << here it is, the service file
+  | -- other files (README, LICENSE, git files, etc)
+  ``` 
