@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{628B80F7-F30
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFileCreator", "src\ServiceFileCreator\ServiceFileCreator.csproj", "{D8F46C3E-25CB-45A0-84C0-4ACDA95C7D24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFileCreator.TestApp", "src\ServiceFileCreator.TestApp\ServiceFileCreator.TestApp.csproj", "{D846411C-9938-4B14-9327-995838B7ED7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{D8F46C3E-25CB-45A0-84C0-4ACDA95C7D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8F46C3E-25CB-45A0-84C0-4ACDA95C7D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8F46C3E-25CB-45A0-84C0-4ACDA95C7D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D846411C-9938-4B14-9327-995838B7ED7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D846411C-9938-4B14-9327-995838B7ED7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D846411C-9938-4B14-9327-995838B7ED7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D846411C-9938-4B14-9327-995838B7ED7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D8F46C3E-25CB-45A0-84C0-4ACDA95C7D24} = {628B80F7-F30C-496F-973A-38B9EF382056}
+		{D846411C-9938-4B14-9327-995838B7ED7D} = {628B80F7-F30C-496F-973A-38B9EF382056}
 	EndGlobalSection
 EndGlobal
