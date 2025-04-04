@@ -60,7 +60,7 @@ jobs:
       run:  dotnet nuget push nupkgs/*.nupkg --source "github" --skip-duplicate
       
     - name: Publish Release
-      uses: "slord399/action-automatic-releases@latest"
+      uses: "slord399/action-automatic-releases@v1.0.1"
       with:
         title: "Release v.${{ env.VERSION }}"
         repo_token: "${{ env.GITHUB_TOKEN }}"
