@@ -48,11 +48,8 @@ jobs:
     - name: Pack nuget packages
       run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
 
-    - uses: actions/checkout@v2
     - name: Build TestApp
-      run: dotnet run --project src/ServiceFileCreator.TestApp/ -c Release
-      working-directory: config
-    #
+      run: sudo dotnet run --project src/ServiceFileCreator.TestApp/ -c Release
     
     #- name: upload nuget package to nuget.org
     #  if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
