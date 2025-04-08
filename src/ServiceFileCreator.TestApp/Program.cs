@@ -7,8 +7,6 @@ namespace ServiceFileCreator.TestApp
     {
         static void Main(string[] args)
         {
-            var jsonFilesPath  = Path.Combine(DefaultNameAndPath.RepositoryRootPath, "config");
-
             IHost host = Host.CreateDefaultBuilder(args)
 
                   .ConfigureServices((context, services) =>
@@ -17,7 +15,7 @@ namespace ServiceFileCreator.TestApp
                   })
                   .Build();
 
-            host.UseAdamServiceFileCreator(repositoryRootPath: jsonFilesPath);
+            host.UseAdamServiceFileCreator();
             host.RunAsync();
         }
     }
