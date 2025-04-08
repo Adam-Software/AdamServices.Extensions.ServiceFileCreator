@@ -71,12 +71,12 @@ Fields are filled in automatically:
 `name` - it is automatically substituted from the assembly name, or changed to the assembly name if the name in the field does not match it. To change this field, you should change the project name.
   
 `version` - It is automatically substituted from the build version, or changed to the build version if the entry in the field does not match it. To change this field, you should change the project version.
-```
+```xml
 <PropertyGroup>
   ...
   <Version>0.1.1</Version>
   ...
-  </PropertyGroup>
+</PropertyGroup>
 ```
 
 `projectType` - It is filled in automatically. Default value: DotnetProject
