@@ -46,7 +46,8 @@ jobs:
       run: dotnet build --no-restore -c Release /p:Version=$VERSION 
 
     - name: Pack nuget packages
-      run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$
+      run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
+      
     - name: Build TestApp
       run: |
            touch config/service_info.json
