@@ -46,7 +46,7 @@ jobs:
       run: dotnet build --no-restore -c Release /p:Version=$VERSION 
 
     - name: Pack nuget packages
-      run: dotnet pack src/ServiceFileCreator/ --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
+      run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
 
     - name: Build TestApp
       run: dotnet run --project src/ServiceFileCreator.TestApp/ -c Release
