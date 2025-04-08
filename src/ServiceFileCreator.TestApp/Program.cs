@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
 using ServiceFileCreator.Extensions;
-using System;
 using System.IO;
 
 namespace ServiceFileCreator.TestApp
@@ -9,8 +8,9 @@ namespace ServiceFileCreator.TestApp
     {
         static void Main(string[] args)
         {
-            var currentDirrectory = Directory.GetCurrentDirectory();
-            var savePath = currentDirrectory;
+            // Save in current dirrectory for building on CI
+            // This should not be the case for use in real projects.
+            string jsonSavePath = Directory.GetCurrentDirectory();
 
             IHost host = Host.CreateDefaultBuilder(args)
 
@@ -20,9 +20,7 @@ namespace ServiceFileCreator.TestApp
                   })
                   .Build();
 
-            Console.WriteLine(savePath);
-
-            host.UseAdamServiceFileCreator(repositoryRootPath:savePath);
+            host.UseAdamServiceFileCreator(repositoryRootPath:jsonSavePath);
             host.RunAsync();
         }
     }
