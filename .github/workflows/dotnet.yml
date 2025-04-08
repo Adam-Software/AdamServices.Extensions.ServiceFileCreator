@@ -44,7 +44,7 @@ jobs:
       
     - name: Build
       run: dotnet build --no-restore -c Release /p:Version=$VERSION 
-
+      
     - name: Pack nuget packages
       run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
 
@@ -74,4 +74,4 @@ jobs:
     #    prerelease: false
     #    files: |
     #        nupkgs/*.nupkg
-            config/*.json
+    #        config/*.json
