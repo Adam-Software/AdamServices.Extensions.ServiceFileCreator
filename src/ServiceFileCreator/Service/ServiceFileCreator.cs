@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using ServiceFileCreator.Model;
 using ServiceFileCreator.Utilites;
 using System;
+using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -55,6 +56,8 @@ namespace ServiceFileCreator.Service
 
                     serviceInfo.Services.ProjectType = projectType;
                 }
+
+                mLogger.LogInformation("Path for save: {path}", Path.Combine(repositoryRootPath, serviceInfoFileName));
 
                 await JsonUtilites.SaveJsonFilesAsync(serviceInfo, repositoryRootPath, serviceInfoFileName);
             }

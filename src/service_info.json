@@ -1,0 +1,19 @@
+{
+  "services": {
+    "name": "ServiceFileCreator.TestApp",
+    "version": "1.0.0.0",
+    "projectType": "DotnetProject",
+    "dependencies": []
+  },
+  "executionOptions": {
+    "arguments": ""
+  },
+  "compilerOptions": {
+    "serviceProjectPath": "",
+    "serviceOutputPath": "",
+    "serviceBuildPath": ""
+  },
+  "systemd": {
+    "serviceFilePath": ""
+  }
+}

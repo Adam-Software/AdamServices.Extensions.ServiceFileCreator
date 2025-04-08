@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using ServiceFileCreator.Extensions;
+using System;
 using System.IO;
 
 namespace ServiceFileCreator.TestApp
@@ -9,7 +10,7 @@ namespace ServiceFileCreator.TestApp
         static void Main(string[] args)
         {
             var currentDirrectory = Directory.GetCurrentDirectory();
-            var savePath = Directory.GetParent(currentDirrectory).Parent.Parent.Parent.FullName;
+            var savePath = Directory.GetParent(currentDirrectory).Parent.Parent.FullName;
 
             IHost host = Host.CreateDefaultBuilder(args)
 
@@ -18,6 +19,8 @@ namespace ServiceFileCreator.TestApp
                       services.AddAdamServiceFileCreator();
                   })
                   .Build();
+
+            Console.WriteLine(savePath);
 
             host.UseAdamServiceFileCreator(repositoryRootPath:savePath);
             host.RunAsync();
