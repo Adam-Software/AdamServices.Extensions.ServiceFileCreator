@@ -50,7 +50,7 @@ jobs:
 
     - name: Build TestApp
       run: |
-            touch service_info.json
+            touch /service_info.json
             dotnet run --project src/ServiceFileCreator.TestApp/ -c Release
     #
     
