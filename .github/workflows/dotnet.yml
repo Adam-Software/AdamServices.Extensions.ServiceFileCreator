@@ -42,12 +42,11 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
       
-    #- name: Build
-    #  run: dotnet build --no-restore -c Release /p:Version=$VERSION 
+    - name: Build
+      run: dotnet build --no-restore -c Release /p:Version=$VERSION 
       
     - name: Pack nuget packages
-      run: dotnet pack --output nupkgs -c Release /p:PackageVersion=$VERSION
-      #run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
+      run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
 
     - name: Run TestApp
       run: dotnet run --project src/ServiceFileCreator.TestApp/ -c Release
