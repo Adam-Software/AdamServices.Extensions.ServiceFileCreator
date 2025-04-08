@@ -10,7 +10,7 @@ namespace ServiceFileCreator.TestApp
         static void Main(string[] args)
         {
             var currentDirrectory = Directory.GetCurrentDirectory();
-            var savePath = Directory.GetParent(currentDirrectory).Parent.Parent.FullName;
+            var savePath = Directory.GetParent(currentDirrectory).FullName;
 
             IHost host = Host.CreateDefaultBuilder(args)
 
