@@ -1,5 +1,12 @@
 # AdamServices.Extensions.ServiceFileCreator
-[![.NET Publish Nuget Package And Release](https://github.com/Adam-Software/AdamServices.Extensions.ServiceFileCreator/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Adam-Software/AdamServices.Extensions.ServiceFileCreator/actions/workflows/dotnet.yml)
+[![.NET Publish Nuget Package And Release](https://github.com/Adam-Software/AdamServices.Extensions.ServiceFileCreator/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Adam-Software/AdamServices.Extensions.ServiceFileCreator/actions/workflows/dotnet.yml)    
+![GitHub License](https://img.shields.io/github/license/Adam-Software/AdamServices.Extensions.ServiceFileCreator)
+![GitHub Release](https://img.shields.io/github/v/release/Adam-Software/AdamServices.Extensions.ServiceFileCreator)
+![NuGet Version](https://img.shields.io/nuget/v/AdamServices.Extensions.ServiceFileCreator)
+
+
+
+
 
 
 Library for creating service files `service_info.json` used by AdamServices.Utilities.Managment , serving as an extension for Microsoft Dependency Injection (DI), and used to standardize the type definition of service files across all projects built within the Managment project.
