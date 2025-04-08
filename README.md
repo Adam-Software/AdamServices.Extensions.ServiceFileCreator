@@ -85,7 +85,7 @@ Fields are filled in automatically:
 ```xml
 <PropertyGroup>
   ...
-  <Version>0.1.1</Version>
+  <Version>1.0.1.2</Version>
   ...
 </PropertyGroup>
 ```
