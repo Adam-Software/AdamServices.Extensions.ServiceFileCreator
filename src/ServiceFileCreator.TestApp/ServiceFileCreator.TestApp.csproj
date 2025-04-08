@@ -9,9 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AdamServices.Extensions.ServiceFileCreator" Version="0.1.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.3" />
     <PackageReference Include="Serilog" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceFileCreator\ServiceFileCreator.csproj" />
   </ItemGroup>
 
 </Project>
