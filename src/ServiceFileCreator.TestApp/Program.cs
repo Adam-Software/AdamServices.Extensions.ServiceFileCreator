@@ -5,7 +5,7 @@ namespace ServiceFileCreator.TestApp
 {
     internal class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             IHost host = Host.CreateDefaultBuilder(args)
 
@@ -16,7 +16,7 @@ namespace ServiceFileCreator.TestApp
                   .Build();
 
             host.UseAdamServiceFileCreator();
-            await host.RunAsync();
+            host.RunAsync();
         }
     }
 }
