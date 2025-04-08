@@ -4,6 +4,8 @@
 
 Utility for creating service files used by AdamServices.Utilities.Managment , serving as an extension for Microsoft Dependency Injection (DI), and used to standardize the type definition of service files across all projects built within the Managment project.
 
+## For users
+
 ### Install
 
 .NET CLI
@@ -82,9 +84,38 @@ Fields are filled in automatically:
 `projectType` - It is filled in automatically. Default value: DotnetProject
 
 The remaining fields of the service file are filled in manually, depending on the technical specifications of the project.
-  
-  
 
+## For developers
+
+### Publishing releases
+
+To publish a release, you need to:
+
+* Upgrade the version in the project configuration and commit the changes
+  ```xml
+  <PropertyGroup>
+    ...
+    <Version>1.0.1</Version>
+    ...
+  </PropertyGroup>
+  ```
+  Version format X.X.X
+* Mark the commit with a tag of the format: v.X.X.X
+  e.g. version 1.0.1 tag v.1.0.1
+* Push commits and tags. The release will be published automatically.
+
+Important!
+
+* Technically, it doesn't matter which version is specified in the project configuration, the version number is taken from the tag. They may differ, for example, as a result of an error or carelessness. Preference should be given to the version specified in the tag.
+* The trigger for publishing a release is a xxx format tag. From any branch.
+
+### What's going on at CI?
+
+* Building a library with a project and a test application to which the library is linked via a link to the project
+* Packaging the library in a nuget package
+* Launching a test application that creates a file, services_info.json with fields filled in by default
+* Publishing packages on nuget and github package
+* Publication of the release to which the following are attached: source codes, nuget package version, services_info.json file with fields filled in by default
   
 
 
