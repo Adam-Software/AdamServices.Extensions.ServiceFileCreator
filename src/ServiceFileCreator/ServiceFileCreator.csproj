@@ -9,7 +9,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Description>Utility for creating service files used by AdamServices.Utilities.Managment</Description>
     <RepositoryUrl>https://github.com/vertigra/Services.Extensions.ServiceFileCreator</RepositoryUrl>
-    <Version>0.1.3</Version>
+    <Version>0.1.4</Version>
     <PackageId>$(SolutionName)</PackageId>
     <Authors>vertigra</Authors>
     <Product>$(SolutionName)</Product>
