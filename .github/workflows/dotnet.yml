@@ -48,10 +48,10 @@ jobs:
     - name: Pack nuget packages
       run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
 
+    - uses: actions/checkout@v2
     - name: Build TestApp
-      run: |
-            cat config/service_info.json
-            dotnet run --project src/ServiceFileCreator.TestApp/ -c Release
+      run: dotnet run --project src/ServiceFileCreator.TestApp/ -c Release
+      working-directory: config
     #
     
     #- name: upload nuget package to nuget.org
