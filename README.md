@@ -4,14 +4,11 @@
 ![GitHub Release](https://img.shields.io/github/v/release/Adam-Software/AdamServices.Extensions.ServiceFileCreator)
 ![NuGet Version](https://img.shields.io/nuget/v/AdamServices.Extensions.ServiceFileCreator)
 
-
-
-
-
-
 Library for creating service files `service_info.json` used by AdamServices.Utilities.Managment , serving as an extension for Microsoft Dependency Injection (DI), and used to standardize the type definition of service files across all projects built within the Managment project.
 
 A fresh sample of the `service_info.json` file can be downloaded from files attached to the latest release. If you do not want or cannot use this library for certain reasons, you can edit the fields filled in by default and put the service file in the root of the repository.
+
+Use the shared [wiki](https://github.com/Adam-Software/AdamServices.Utilities.Managment/wiki) to find information about the project.
 
 ## For users
 
