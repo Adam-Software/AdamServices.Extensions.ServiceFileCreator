@@ -17,6 +17,8 @@ namespace ServiceFileCreator.Service
 
         #endregion
 
+
+
         public ServiceFileCreator(IServiceProvider serviceProvider) 
         {
             mLogger = serviceProvider.GetService<ILogger<ServiceFileCreator>>();
@@ -30,7 +32,8 @@ namespace ServiceFileCreator.Service
                 ServiceInfo serviceInfo = await JsonUtilites.ReadJsonFileAsync<ServiceInfo>(repositoryRootPath, serviceInfoFileName);
                 Assembly entryAssembly = Assembly.GetEntryAssembly();
 
-                string appVersion = entryAssembly.GetName().Version.ToString();
+                var version = entryAssembly.GetName().Version;
+                string appVersion = $"{version.Major}.{version.Minor}.{version.Build}";
                 string appName = entryAssembly.GetName().Name;
 
                 if (!serviceInfo.Services.Version.Equals(appVersion))
@@ -57,7 +60,7 @@ namespace ServiceFileCreator.Service
                     serviceInfo.Services.ProjectType = projectType;
                 }
 
-                mLogger.LogInformation("Path for save: {path}", Path.Combine(repositoryRootPath, serviceInfoFileName));
+                mLogger.LogTrace("Path for save: {path}", Path.Combine(repositoryRootPath, serviceInfoFileName));
 
                 await JsonUtilites.SaveJsonFilesAsync(serviceInfo, repositoryRootPath, serviceInfoFileName);
             }
