@@ -71,18 +71,18 @@ Fields are filled in automatically:
 ```
 "services": {
   "name": "FindRobot",
-  "version": "1.0.1.2",
+  "version": "1.0.1",
   "projectType": "DotnetProject",
 },
 ```
   
 `name` - it is automatically substituted from the assembly name, or changed to the assembly name if the name in the field does not match it. To change this field, you should change the project name.
   
-`version` - It is automatically substituted from the build version, or changed to the build version if the entry in the field does not match it. To change this field, you should change the project version.
+`version` - It is automatically substituted from the entry assembly version, or changed to the build version if the entry in the field does not match it.  The version is extracted according to the pattern `Version.Major`.`Version.Minor`.`Version.Build`. To change this field, you should change the project version.
 ```xml
 <PropertyGroup>
   ...
-  <Version>1.0.1.2</Version>
+  <Version>1.0.1</Version>
   ...
 </PropertyGroup>
 ```
